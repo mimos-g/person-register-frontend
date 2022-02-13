@@ -69,7 +69,6 @@ export class PersonFormComponent implements OnInit, OnChanges {
     this.professions$ = this.professionService.getProfessions();
   }
 
-
   getErrorMessage(controlName: string): string {
 
     const control = this.form.controls[controlName]

@@ -20,8 +20,6 @@ export class AlertComponent {
     })
   }
 
-
-
   toast(position: SweetAlertPosition, icon: SweetAlertIcon, title: string) {
     const Toast = Swal.mixin({
       toast: true,

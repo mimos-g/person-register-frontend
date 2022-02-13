@@ -20,7 +20,6 @@ export class PersonEditComponent implements OnInit {
   ngOnInit(): void {
     const personId = Number(this.route.snapshot.paramMap.get('id'));
     this.getPerson(personId);
-
   }
 
   async getPerson(id: number) {
