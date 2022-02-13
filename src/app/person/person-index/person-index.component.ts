@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Person } from '../model/person';
+import { PersonService } from '../service/person.service';
 
 export interface Tile {
   color: string;
@@ -14,9 +17,16 @@ export interface Tile {
 })
 export class PersonIndexComponent implements OnInit {
 
-  constructor() { }
+  persons$!: Observable<Person[]>;
+
+  constructor(private personService: PersonService) { }
 
   ngOnInit(): void {
+    this.getPersons();
+  }
+
+  getPersons() {
+    this.persons$ = this.personService.getPersons();
   }
 
 }
