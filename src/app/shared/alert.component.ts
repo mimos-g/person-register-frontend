@@ -7,7 +7,7 @@ import Swal, { SweetAlertResult } from 'sweetalert2'
 })
 export class AlertComponent {
 
-  confirmation(title: string = "Confirmar", text: string = "Desejas Continuar"): Promise<SweetAlertResult> {
+  confirmation(title: string = "Confirmar", text: string = "do you want to continue?"): Promise<SweetAlertResult> {
     return Swal.fire({
       title: title,
       html: text,
@@ -17,9 +17,9 @@ export class AlertComponent {
       //   Swal.hideLoading()
       // },
       showCancelButton: true,
-      cancelButtonText: 'Não',
+      cancelButtonText: 'No',
       confirmButtonColor: '#3085d6',
-      confirmButtonText: 'Sim',
+      confirmButtonText: 'Yes',
     })
   }
 
