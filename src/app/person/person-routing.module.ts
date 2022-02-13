@@ -20,7 +20,7 @@ const routes: Routes = [
     component: PersonShowComponent
   },
   {
-    path: 'person/edit:id',
+    path: 'person/edit/:id',
     component: PersonEditComponent
   }
 ];

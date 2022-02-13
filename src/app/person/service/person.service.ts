@@ -28,7 +28,7 @@ export class PersonService {
 
   updatePerson(person: Person): Observable<Person> {
     console.log('update person');
-    return this.http.patch<Person>(this.personUrl, person);
+    return this.http.patch<Person>(`${this.personUrl}/${person.id}`, person);
   }
 
   deletePerson(id: number): Observable<Person> {

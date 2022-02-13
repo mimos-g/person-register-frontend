@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Person } from '../model/person';
+import { PersonService } from '../service/person.service';
 
 @Component({
   selector: 'app-person-edit',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonEditComponent implements OnInit {
 
-  constructor() { }
+  person!: Person
+
+  constructor(
+    private route: ActivatedRoute,
+    private personService: PersonService
+  ) { }
 
   ngOnInit(): void {
+    const personId = Number(this.route.snapshot.paramMap.get('id'));
+    this.getPerson(personId);
+
   }
 
+  async getPerson(id: number) {
+    this.person = await this.personService.getPerson(id).toPromise();
+  }
 }
