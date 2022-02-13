@@ -1,1 +1,34 @@
-<p>person-index works!</p>
+<div class="card-body">
+  <div class="card mb-3" _style="max-width: 540px;" *ngFor="item of [1,2,3]">
+    <div class="row g-0">
+      <div class="col-3 d-flex">
+        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          class=" perosn-img img-fluid_ rounded-start mx-auto my-auto _m-2 border border-5 border-blue-theme" alt="person-img">
+      </div>
+      <div class="col-9 d-flex">
+        <div class="card-body text-uppercase my-auto mb-2">
+          <div class="card-text border-bottom border-2 border-dark text-center">
+            <p class="fs-6_ fw-500">name: victor hugo</p>
+          </div>
+          <div class="card-text mt-2 text-center">
+            <p class="fs-6_">name: victor hugo</p>
+          </div>
+
+          <div class="d-flex">
+            <button mat-raised-button
+              class="rounded-pill btn btn-sm bg-blue-theme ms-auto mt-lg-5 mt-md-2 mt-sm-0 mb-0 py-0 text-white _position-md-absolute bottom-0_ _end-0">
+              <small>READ MORE</small>
+              <mat-icon aria-hidden="false">keyboard_double_arrow_right</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex m-2">
+    <button mat-fab color="accent" class=" btn btn-lg ms-auto">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>

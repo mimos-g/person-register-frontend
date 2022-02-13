@@ -12,3 +12,11 @@ body {
 .bg-blue-theme {
   background-color: #35a7df;
 }
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.border-blue-theme {
+  border-color: #35a7df !important;
+}
