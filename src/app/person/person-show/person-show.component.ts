@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertComponent } from 'src/app/shared/alert.component';
 
 @Component({
   selector: 'app-person-show',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonShowComponent implements OnInit {
 
-  constructor() { }
+  constructor(private alertComponent: AlertComponent) { }
 
   ngOnInit(): void {
+  }
+
+  deletePerson() {
+    this.alertComponent.confirmation();
   }
 
 }
