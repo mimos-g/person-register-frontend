@@ -1,8 +1,8 @@
 <div class="card-body">
-  <div class="card mb-3" *ngFor="let person of persons$ | async">
+  <div class="person-card card mb-3_" *ngFor="let person of persons$ | async">
     <div class="row g-0 m-3">
       <div class="col-3 d-flex">
-        <img src="/assets/avatar.png" class=" perosn-img img-fluid rounded-start border border-5 border-blue-theme"
+        <img src="/assets/avatar.png" style="object-fit: cover;" class="perosn-img img-fluid rounded-start border border-5 border-blue-theme"
           alt="person-img">
       </div>
       <div class="col-9 d-flex">

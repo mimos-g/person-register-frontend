@@ -1,10 +1,10 @@
-<div class="card mb-3">
-  <div class="row g-0 m-2">
-    <div class="col-4 d-flex">
-      <img src="/assets/avatar.png" class=" perosn-img img-fluid rounded-start border border-5 border-blue-theme"
+<div class="person-card card mb-3">
+  <div class="row g-0">
+    <div class="col-3 d-flex">
+      <img src="/assets/avatar.png" style="object-fit: cover;" class="perosn-img img-fluid rounded-start border border-5 border-blue-theme"
         alt="person-img">
     </div>
-    <div class="col-8 d-flex">
+    <div class="col-9 d-flex">
       <div class="card-body text-uppercase my-auto mb-2">
         <div class="card-text">
           <p class="fs-6_ fw-500">name: {{person?.name}}</p>
@@ -13,13 +13,13 @@
           <p class="fs-6_ fw-500">profession: {{person?.profession?.name}}</p>
         </div>
 
-        <div class="d-flex justify-content-end">
+        <div class="action-buttons d-flex justify-content-end">
           <button mat-raised-button [routerLink]='["/edit", person?.id]'
-            class="btn btn-sm bg-blue-theme mx-2 mt-4 mb-0 py-0 text-white">
+            class="btn btn-sm bg-blue-theme mx-2 mb-0 py-0 text-white">
             Edit
             <mat-icon aria-hidden="false">edit</mat-icon>
           </button>
-          <button (click)="deletePerson()" mat-raised-button color="warn" class="btn btn-sm mt-4 mb-0 py-0 text-white">
+          <button (click)="deletePerson()" mat-raised-button color="warn" class="btn btn-sm mb-0 py-0 text-white">
             Delete
             <mat-icon aria-hidden="false">delete</mat-icon>
           </button>
