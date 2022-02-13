@@ -22,10 +22,12 @@ export class PersonService {
   }
 
   addPerson(person: Person): Observable<Person> {
+    console.log('add person');
     return this.http.post<Person>(this.personUrl, person);
   }
 
   updatePerson(person: Person): Observable<Person> {
+    console.log('update person');
     return this.http.patch<Person>(this.personUrl, person);
   }
 

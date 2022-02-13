@@ -9,6 +9,7 @@ import { PersonFormComponent } from './person-form/person-form.component';
 import { AngularMaterialModule } from '../shared/angular-material.module';
 import { PersonEditComponent } from './person-edit/person-edit.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     PersonRoutingModule,
     AngularMaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class PersonModule { }

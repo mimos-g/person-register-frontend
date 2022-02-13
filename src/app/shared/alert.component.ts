@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import Swal, { SweetAlertResult } from 'sweetalert2'
+import Swal, { SweetAlertIcon, SweetAlertPosition, SweetAlertResult } from 'sweetalert2'
 
 
 @Injectable({
@@ -13,14 +13,35 @@ export class AlertComponent {
       html: text,
       icon: 'warning',
       showLoaderOnConfirm: false,
-      // didOpen: () => {
-      //   Swal.hideLoading()
-      // },
       showCancelButton: true,
       cancelButtonText: 'No',
       confirmButtonColor: '#3085d6',
       confirmButtonText: 'Yes',
     })
   }
+
+
+
+  toast(position: SweetAlertPosition, icon: SweetAlertIcon, title: string) {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: position,
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+
+    Toast.fire({
+      icon: icon,
+      title: title
+    })
+  }
+
+
+
 
 }
