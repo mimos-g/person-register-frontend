@@ -7,7 +7,6 @@ import { PersonShowComponent } from './person-show/person-show.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'person' },
-  // { path: '', component: PersonIndexComponent },
   {
     path: 'person',
     component: PersonIndexComponent
@@ -17,11 +16,11 @@ const routes: Routes = [
     component: PersonNewComponent
   },
   {
-    path: 'person/show',
+    path: 'person/show/:id',
     component: PersonShowComponent
   },
   {
-    path: 'person/edit',
+    path: 'person/edit:id',
     component: PersonEditComponent
   }
 ];

@@ -4,7 +4,7 @@ export interface Person {
   id?: number,
   name: string,
   phone: string,
-  emai: string,
+  email: string,
   profession_id: number,
   profession?: Profession
 }
