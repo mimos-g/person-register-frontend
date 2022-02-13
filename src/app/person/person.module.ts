@@ -8,6 +8,7 @@ import { PersonShowComponent } from './person-show/person-show.component';
 import { PersonFormComponent } from './person-form/person-form.component';
 import { PersonDeleteComponent } from './person-delete/person-delete.component';
 import { AngularMaterialModule } from '../shared/angular-material.module';
+import { PersonEditComponent } from './person-edit/person-edit.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AngularMaterialModule } from '../shared/angular-material.module';
     PersonNewComponent,
     PersonShowComponent,
     PersonFormComponent,
-    PersonDeleteComponent
+    PersonDeleteComponent,
+    PersonEditComponent
   ],
   imports: [
     CommonModule,
