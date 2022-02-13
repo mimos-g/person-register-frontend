@@ -7,8 +7,7 @@ import { PersonNewComponent } from './person-new/person-new.component';
 import { PersonShowComponent } from './person-show/person-show.component';
 import { PersonFormComponent } from './person-form/person-form.component';
 import { PersonDeleteComponent } from './person-delete/person-delete.component';
-
-import { MatSliderModule } from '@angular/material/slider';
+import { AngularMaterialModule } from '../shared/angular-material.module';
 
 
 @NgModule({
@@ -22,7 +21,7 @@ import { MatSliderModule } from '@angular/material/slider';
   imports: [
     CommonModule,
     PersonRoutingModule,
-    MatSliderModule
+    AngularMaterialModule
   ]
 })
 export class PersonModule { }
