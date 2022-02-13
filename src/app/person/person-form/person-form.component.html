@@ -1,1 +1,54 @@
-<p>person-form works!</p>
+<form>
+  <div class="row mt-3">
+    <div class="col-12 col-sm-6">
+      <mat-form-field appearance="legacy" class="w-100">
+        <mat-label>Full name</mat-label>
+        <input matInput formControlName="company_name" required>
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-error>Obrigatório</mat-error>
+        <!-- <mat-error>{{ getErrorMessage(0, 'company_name') }}</mat-error> -->
+      </mat-form-field>
+    </div>
+    <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+      <mat-form-field appearance="legacy" class="w-100">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="company_initial" required>
+        <mat-icon matSuffix>smartphone</mat-icon>
+        <mat-error>Obrigatório</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12 col-sm-6">
+      <mat-form-field appearance="legacy" class="w-100">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="company_initial" required>
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error>Obrigatório</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+      <mat-form-field appearance="legacy" class="w-100">
+        <mat-select formControlName="company_category">
+          <mat-option>-- nenhum --</mat-option>
+          <mat-option *ngFor="let companyCategory of [1,2]">
+            {{companyCategory}}
+          </mat-option>
+        </mat-select>
+        <mat-label> Profession</mat-label>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="button-row d-flex  justify-content-end mt-4">
+    <button mat-raised-button routerLink="show" color="warn" class="rounded-pill mx-2 btn btn-sm mb-0 text-white">
+      Clean
+      <mat-icon aria-hidden="false">clear</mat-icon>
+    </button>
+    <button type="submit" mat-raised-button routerLink="show"
+      class="rounded-pill btn btn-sm btn-success mb-0 text-white">
+      Save
+      <mat-icon aria-hidden="false">check</mat-icon>
+    </button>
+  </div>
+</form>

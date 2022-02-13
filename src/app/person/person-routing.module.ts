@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PersonIndexComponent } from './person-index/person-index.component';
+import { PersonNewComponent } from './person-new/person-new.component';
 import { PersonShowComponent } from './person-show/person-show.component';
 
 const routes: Routes = [
@@ -11,8 +12,8 @@ const routes: Routes = [
     component: PersonIndexComponent
   },
   {
-    path: 'person/add',
-    component: PersonShowComponent
+    path: 'person/new',
+    component: PersonNewComponent
   },
   {
     path: 'person/show',
