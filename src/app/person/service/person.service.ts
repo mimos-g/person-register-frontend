@@ -13,7 +13,7 @@ import { Profession } from '../model/profession';
 })
 export class PersonService {
 
-  personUrl: string = `${environment.mockServer}/persons`
+  personUrl: string = `${environment.api}/persons`
 
   constructor(
     private http: HttpClient,

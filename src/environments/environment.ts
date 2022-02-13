@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  mockServer: ' http://localhost:3000'
+  mock:false,
+  mockServer: ' http://localhost:3000',
+  api: ' http://localhost:3333'
 };
 
 /*

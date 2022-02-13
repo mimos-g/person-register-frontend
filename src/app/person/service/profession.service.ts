@@ -11,7 +11,7 @@ import { Profession } from '../model/profession';
 })
 export class ProfessionService {
 
-  professionUrl: string = `${environment.mockServer}/professions`
+  professionUrl: string = `${environment.api}/professions`
 
   constructor(
     private http: HttpClient,
