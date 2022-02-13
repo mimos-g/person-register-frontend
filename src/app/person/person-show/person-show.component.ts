@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertComponent } from 'src/app/shared/alert.component';
+import { OPERATION_STATUS_MESSAGE } from 'src/app/shared/interative-message';
 import { Person } from '../model/person';
 import { PersonService } from '../service/person.service';
 
@@ -30,6 +31,7 @@ export class PersonShowComponent implements OnInit {
       .then(result => {
         if (result.isConfirmed) {
           this.personService.deletePerson(this.person.id!).subscribe(data => {
+            this.alertComponent.toast('top-end', 'success', OPERATION_STATUS_MESSAGE.SUCCESS)
             this.router.navigate([''])
           });
         }

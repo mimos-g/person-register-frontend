@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { FORM_ERROR_MESSAGE } from 'src/app/shared/interative-message';
+import { FORM_ERROR_MESSAGE, OPERATION_STATUS_MESSAGE } from 'src/app/shared/interative-message';
 import { Person } from '../model/person';
 import { Profession } from '../model/profession';
 import { PersonService } from '../service/person.service';
@@ -55,7 +55,7 @@ export class PersonFormComponent implements OnInit, OnChanges {
         : this.personService.addPerson(this.form.value);
 
       $savePeson.subscribe(createdPerson => {
-        this.alertComponent.toast('top-end', 'success', 'successfully saved');
+        this.alertComponent.toast('top-end', 'success', OPERATION_STATUS_MESSAGE.SUCCESS);
         if (!this.person) {
           document.getElementById('resetBtn')?.click()
         } else {
