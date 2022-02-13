@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PersonDeleteComponent } from './person-delete/person-delete.component';
+import { PersonEditComponent } from './person-edit/person-edit.component';
 import { PersonIndexComponent } from './person-index/person-index.component';
 import { PersonNewComponent } from './person-new/person-new.component';
 import { PersonShowComponent } from './person-show/person-show.component';
@@ -21,11 +23,11 @@ const routes: Routes = [
   },
   {
     path: 'person/edit',
-    component: PersonShowComponent
+    component: PersonEditComponent
   },
   {
     path: 'person/delete',
-    component: PersonShowComponent
+    component: PersonDeleteComponent
   }
 ];
 
