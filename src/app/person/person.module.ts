@@ -8,6 +8,8 @@ import { PersonShowComponent } from './person-show/person-show.component';
 import { PersonFormComponent } from './person-form/person-form.component';
 import { PersonDeleteComponent } from './person-delete/person-delete.component';
 
+import { MatSliderModule } from '@angular/material/slider';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { PersonDeleteComponent } from './person-delete/person-delete.component';
   ],
   imports: [
     CommonModule,
-    PersonRoutingModule
+    PersonRoutingModule,
+    MatSliderModule
   ]
 })
 export class PersonModule { }
